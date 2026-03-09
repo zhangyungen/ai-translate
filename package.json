@@ -1,0 +1,11 @@
+{
+  "name": "ai-translate-extension",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "check": "node --check src/background/background.js && node --check src/content/content.js && node --check src/popup/popup.js && node --check src/shared/constants.js && node --check src/shared/logger.js && node --check src/domain/segmenter.js && node --check src/domain/difficult-phrase.js && node --check src/infrastructure/runtime-client.js && node --check src/infrastructure/translation-gateway.js",
+    "self-test": "node scripts/self-test.js",
+    "package": "bash scripts/package.sh",
+    "build:zip": "bash scripts/package.sh"
+  }
+}

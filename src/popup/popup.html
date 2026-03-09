@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Translate</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="panel">
+      <header class="panel-header">
+        <div class="brand">AI 翻译</div>
+        <button id="openWeb" class="link-btn" type="button">网页版</button>
+      </header>
+
+      <section class="lang-row">
+        <select id="sourceLang"></select>
+        <button id="swapBtn" class="swap-btn" type="button">⇄</button>
+        <select id="targetLang"></select>
+      </section>
+
+      <section class="io-block">
+        <textarea id="sourceText" maxlength="500" placeholder="请输入..."></textarea>
+        <div class="count" id="counter">0/500</div>
+      </section>
+
+      <section class="result" id="resultText"></section>
+      <section class="mode-status" id="modeStatus">当前功能：无</section>
+
+      <footer class="footer-actions">
+        <button id="togglePage" type="button">开启/关闭整页翻译</button>
+        <button id="toggleReading" type="button">开启/关闭阅读模式</button>
+      </footer>
+    </main>
+
+    <script src="../shared/constants.js"></script>
+    <script src="../shared/logger.js"></script>
+    <script src="../infrastructure/runtime-client.js"></script>
+    <script src="../infrastructure/translation-gateway.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+.ai-translate-hover-box,
+.ai-translate-selection-box,
+.ai-translate-reading-box,
+.ai-translate-reading-translation-box {
+  margin-top: 6px;
+  padding: 6px 8px;
+  border-left: 3px solid #0052d9;
+  background: #f0f6ff;
+  color: #1f1f1f;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.ai-translate-page-box {
+  margin-top: 6px;
+  margin-bottom: 10px;
+  padding: 8px 10px;
+  border-left: 3px solid #1677ff;
+  background: #f5f9ff;
+  color: #262626;
+  font-size: 14px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.ai-translate-reading-box {
+  border-left-color: #0b7a75;
+  background: #ecfffa;
+}
+
+.ai-translate-reading-translation-box {
+  border-left-color: #1677ff;
+  background: #f5f9ff;
+}
+
+.ai-translate-glossary {
+  margin-top: 6px;
+  padding: 6px 8px;
+  border-left: 3px solid #fa8c16;
+  background: #fff7e6;
+  color: #262626;
+  font-size: 13px;
+}
+
+.ai-translate-inline-tag {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.ai-translate-banner {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 2147483647;
+  background: #001529;
+  color: #fff;
+  padding: 10px 12px;
+  border-radius: 8px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.24);
+  font-size: 13px;
+}
+
+.ai-translate-banner button {
+  margin-left: 8px;
+  border: 0;
+  background: #1677ff;
+  color: #fff;
+  border-radius: 6px;
+  padding: 4px 8px;
+  cursor: pointer;
+}

@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "AI Translate Extension",
+  "version": "0.1.0",
+  "description": "Translate any language to any language with page mode and reading mode.",
+  "permissions": ["storage", "contextMenus", "activeTab", "scripting"],
+  "host_permissions": ["https://transmart.qq.com/*", "<all_urls>"],
+  "background": {
+    "service_worker": "src/background/background.js"
+  },
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_title": "AI Translate"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "run_at": "document_idle",
+      "js": [
+        "src/shared/constants.js",
+        "src/shared/logger.js",
+        "src/domain/segmenter.js",
+        "src/domain/difficult-phrase.js",
+        "src/infrastructure/runtime-client.js",
+        "src/infrastructure/translation-gateway.js",
+        "src/content/content.js"
+      ],
+      "css": ["src/content/content.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["src/content/content.css"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
